@@ -1,65 +1,45 @@
 Version: 1.0.0
-Date: [Insert Date]
-Author: [Your Name or Company Name]
+Date: 12th March,2025.
+Author: SHAIK ASHRAAF
 
 Overview
-This repository contains a Python-based Employee Activity Monitoring System designed for monitoring employee activities on company-issued laptops. The system continuously logs keystrokes, stores them securely, and sends encrypted logs to a remote server via Telegram for monitoring purposes. The script is designed to be run in the background with minimal interaction from the user, ensuring that it remains invisible while performing its tasks.
+
+This repository contains a Python-based KEYlogger designed for monitoring employee activities on company-issued laptops. The system continuously logs keystrokes, stores them securely, and sends encrypted logs to a remote server via Telegram for monitoring purposes. The script is designed to be run in the background with minimal interaction from the user, ensuring that it remains invisible while performing its tasks.
 
 This tool is intended for ethical use under the supervision of the company’s HR and ethical boards. The project is hypothetical and not intended for illegal use or deployment without explicit consent.
 
 Features
+
 Keystroke Logging: The system logs each keystroke typed on the laptop, capturing timestamps and key events.
-
 Telegram Integration: Logs are sent to a Telegram bot in real time for monitoring purposes, enabling remote observation of employee activities.
-
 Automatic Log Flush: Logs are temporarily stored in memory, and once a certain buffer size is reached, they are flushed to a log file for persistent storage.
-
 Log Encryption: Logs are encrypted using the Fernet encryption method to ensure secure storage, preventing unauthorized access.
-
 Background Operation: The script runs continuously in the background, without user interaction, to ensure that it remains unobtrusive.
-
 Data Cleanup: The script includes a stealth cleanup feature that periodically sends logs to the Telegram bot, and after transmission, the logs are encrypted and securely stored.
-
 Persistent Monitoring: The system operates indefinitely, continuing to monitor keystrokes and send logs until it is manually stopped or terminated under controlled conditions.
 
 Installation Instructions
 Requirements:
-
 Python 3.x
 
 Install the necessary dependencies using:
-
-bash
-Copy
-Edit
 pip install -r requirements.txt
 Libraries include: keyboard, requests, cryptography, python-dotenv
 
 Setup:
-
 Clone the repository to your local machine:
 
-bash
-Copy
-Edit
-git clone <repository_url>
 Configure Telegram Bot:
-
 Obtain your Telegram Bot API Token from the BotFather and set it in your .env file:
 
-ini
-Copy
-Edit
-Bot_t=your_bot_token_here
-Chat_id=your_chat_id_here
-Run the Script:
+Bot_t= your_bot_token_here
+Chat_id= your_chat_id_here
 
+Run the Script:
 After configuring your environment and installing dependencies, simply run the script:
 
-bash
-Copy
-Edit
-python monitoring_script.py
+python teltest.py
+
 The script will run in the background, logging keystrokes and sending them to the specified Telegram chat.
 
 Security & Privacy
